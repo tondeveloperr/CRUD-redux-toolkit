@@ -8,7 +8,7 @@ import axios from "axios";
 export const getProducts = createAsyncThunk(
   "products/getProducts",
   async () => {
-    const response = await axios.get("http://localhost:3500/products");
+    const response = await axios.get("http://localhost:5000/products");
     return response.data;
   }
 );
@@ -16,7 +16,7 @@ export const getProducts = createAsyncThunk(
 export const saveProduct = createAsyncThunk(
   "products/saveProduct",
   async ({ title, price }) => {
-    const response = await axios.post("http://localhost:3500/products", {
+    const response = await axios.post("http://localhost:5000/products", {
       title,
       price,
     });
@@ -27,7 +27,7 @@ export const saveProduct = createAsyncThunk(
 export const updateProduct = createAsyncThunk(
   "products/updateProduct",
   async ({ id, title, price }) => {
-    const response = await axios.patch(`http://localhost:3500/products/${id}`, {
+    const response = await axios.patch(`http://localhost:5000/products/${id}`, {
       title,
       price,
     });
@@ -38,7 +38,7 @@ export const updateProduct = createAsyncThunk(
 export const deleteProduct = createAsyncThunk(
   "products/deleteProduct",
   async (id) => {
-    await axios.delete(`http://localhost:3500/products/${id}`);
+    await axios.delete(`http://localhost:5000/products/${id}`);
     return id;
   }
 );
