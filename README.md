@@ -1,4 +1,4 @@
-# React 3D Model
+# CRUD App with Redux Toolkit and React.js
 
 ## `Preview Project 👇`
 
